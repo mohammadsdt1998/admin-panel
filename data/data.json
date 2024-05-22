@@ -24,43 +24,43 @@
   "social-media": [
     {
       "name": "January",
-      "uv": 4000,
+      "income": 4000,
       "users": 2400,
       "amt": 2400
     },
     {
       "name": "February",
-      "uv": 3000,
+      "income": 1000,
       "users": 1298,
       "amt": 2210
     },
     {
       "name": "March",
-      "uv": 2000,
+      "income": 2000,
       "users": 9800,
       "amt": 2290
     },
     {
       "name": "April",
-      "uv": 2780,
+      "income": 2780,
       "users": 3908,
       "amt": 2000
     },
     {
       "name": "May",
-      "uv": 1890,
+      "income": 5000,
       "users": 14800,
       "amt": 2181
     },
     {
       "name": "June",
-      "uv": 2390,
+      "income": 2390,
       "users": 3800,
       "amt": 2500
     },
     {
       "name": "July",
-      "uv": 3490,
+      "income": 3490,
       "users": 4300,
       "amt": 2100
     }

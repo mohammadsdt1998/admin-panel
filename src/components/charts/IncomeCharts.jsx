@@ -1,20 +1,22 @@
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 import DropDownBtn from "../../ui/DropDownBtn";
 
-function UsersChart({ socialMediaData }) {
-  const totalUsers = Math.round(
-    socialMediaData.reduce((acc, item) => acc + item.users, 0) / 1000,
+function IncomeCharts({ socialMediaData }) {
+  const totalIncome = socialMediaData.reduce(
+    (acc, item) => acc + item.income,
+    0,
   );
+  const averageIncome = Math.round(totalIncome / socialMediaData.length);
 
   return (
-    <div className="col-span-1 flex h-40 w-full flex-col gap-10 rounded-md bg-violet-700">
+    <div className="col-span-1 h-40 w-full rounded-md bg-blue-500">
       <div className="flex h-full w-full flex-col items-baseline text-black">
         <div className="flex h-full w-full flex-col items-start justify-around p-4 text-slate-100">
           <div className="flex w-full items-center justify-between">
-            <h1 className="text-xl font-semibold">{totalUsers}K</h1>
+            <h1 className="text-xl font-semibold">${averageIncome}</h1>
             <DropDownBtn />
           </div>
-          <p>Users</p>
+          <p>Income</p>
         </div>
 
         <div className="mb-3 h-full w-full">
@@ -22,10 +24,10 @@ function UsersChart({ socialMediaData }) {
             <LineChart width={150} height={100} data={socialMediaData}>
               <Line
                 type="monotone"
-                dataKey="users"
+                dataKey="income"
                 stroke="#cbd5e1"
                 strokeWidth={2}
-                fill="#7c3aed"
+                fill="#60a5fa"
               />
               <Tooltip
                 cursor={{ strokeWidth: 0 }}
@@ -44,4 +46,4 @@ function UsersChart({ socialMediaData }) {
   );
 }
 
-export default UsersChart;
+export default IncomeCharts;
