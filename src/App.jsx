@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import Users from "./pages/Users";
+import Home, { loader as socialMediaLoader } from "./pages/Home";
+import Users, { loader as usersLoader } from "./pages/Users";
 import Products from "./pages/Products";
 import AppLayout from "./ui/AppLayout";
 import Login from "./pages/Login";
@@ -12,10 +12,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: socialMediaLoader,
       },
       {
         path: "/users",
         element: <Users />,
+        loader: usersLoader,
       },
       {
         path: "/products",

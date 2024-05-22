@@ -2,8 +2,8 @@ import MenuBar from "./MenuBar";
 
 function SideBar({ handleClick }) {
   return (
-    <sidebar
-      className="flex w-1/3 flex-col gap-10 border-b border-r
+    <div
+      className="flex w-1/4 flex-col gap-10 border-b border-r
   border-gray-600 bg-primary lg:w-full lg:border-none"
     >
       <div className="flex w-full items-center justify-between border-b border-gray-600 p-4 lg:mt-3 lg:justify-normal">
@@ -16,7 +16,7 @@ function SideBar({ handleClick }) {
         </span>
       </div>
       <MenuBar />
-    </sidebar>
+    </div>
   );
 }
 
