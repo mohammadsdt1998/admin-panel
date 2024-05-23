@@ -26,43 +26,50 @@
       "name": "January",
       "income": 4000,
       "users": 2400,
-      "amt": 2400
+      "conversation_rate": 10,
+      "sessions": 5000
     },
     {
       "name": "February",
       "income": 1000,
-      "users": 1298,
-      "amt": 2210
+      "users": 898,
+      "conversation_rate": 12,
+      "sessions": 3475
     },
     {
       "name": "March",
       "income": 2000,
-      "users": 9800,
-      "amt": 2290
+      "users": 3800,
+      "conversation_rate": 20,
+      "sessions": 7432
     },
     {
       "name": "April",
       "income": 2780,
       "users": 3908,
-      "amt": 2000
+      "conversation_rate": 17,
+      "sessions": 10800
     },
     {
       "name": "May",
       "income": 5000,
       "users": 14800,
-      "amt": 2181
+      "conversation_rate": 3,
+      "sessions": 8000
     },
     {
       "name": "June",
       "income": 2390,
       "users": 3800,
-      "amt": 2500
+      "conversation_rate": 10,
+      "sessions": 3200
     },
     {
       "name": "July",
       "income": 3490,
       "users": 4300,
-      "amt": 2100
+      "conversation_rate": 16,
+      "sessions": 6000
     }
   ]
 }

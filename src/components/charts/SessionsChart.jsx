@@ -1,36 +1,33 @@
-import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
+import { Bar, BarChart, ResponsiveContainer, Tooltip } from "recharts";
 import DropDownBtn from "../../ui/DropDownBtn";
 
-function IncomeCharts({ socialMediaData }) {
-  const totalIncome = socialMediaData.reduce(
-    (acc, item) => acc + item.income,
-    0,
+function SessionsChart({ socialMediaData }) {
+  const totalSessions = Math.round(
+    socialMediaData.reduce((acc, item) => acc + item.sessions, 0) / 1000,
   );
-  const averageIncome = Math.round(totalIncome / socialMediaData.length);
 
   return (
-    <div className="col-span-1 h-40 w-full rounded-md bg-blue-500">
+    <div className="col-span-1 h-40 w-full rounded-md bg-red-400">
       <div className="flex h-full w-full flex-col items-baseline text-black">
         <div className="flex h-full w-full flex-col items-start justify-around p-4 text-slate-100">
           <div className="flex w-full items-center justify-between">
-            <h1 className="text-xl font-semibold">${averageIncome}</h1>
+            <h1 className="text-xl font-semibold">{totalSessions}K</h1>
             <DropDownBtn />
           </div>
-          <p>Income</p>
+          <p>Sessions</p>
         </div>
 
-        <div className="mb-3 h-full w-full">
+        <div className="h-full w-full">
           <ResponsiveContainer width="99%" height="100%">
-            <LineChart width={150} height={100} data={socialMediaData}>
-              <Line
-                type="monotone"
-                dataKey="income"
-                stroke="#cbd5e1"
-                strokeWidth={2}
-                fill="#60a5fa"
+            <BarChart width={100} height={100} data={socialMediaData}>
+              <Bar
+                dataKey="sessions"
+                fill="#fca5a5"
+                barSize={8}
+                onMouseEnter={{ background: "red" }}
               />
               <Tooltip
-                cursor={{ strokeWidth: 0 }}
+                cursor={{ fill: "transparent", strokeWidth: 0 }}
                 contentStyle={{ background: "transparent", border: "none" }}
                 itemStyle={{ display: "none" }}
                 labelStyle={{ color: "#f3f4f7", fontWeight: "bold" }}
@@ -38,7 +35,7 @@ function IncomeCharts({ socialMediaData }) {
                   `${(socialMediaData[index] && socialMediaData[index].name) || ""}`
                 }
               />
-            </LineChart>
+            </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
@@ -46,4 +43,4 @@ function IncomeCharts({ socialMediaData }) {
   );
 }
 
-export default IncomeCharts;
+export default SessionsChart;
