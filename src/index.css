@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+progress::-webkit-progress-bar {
+  background-color: #475569;
+}
+
+progress.visit-progress::-webkit-progress-value {
+  background-color: #22c55e;
+}
+
+progress.unique-progress::-webkit-progress-value {
+  background-color: #0ea5e9;
+}
+
+progress.new-user-progress::-webkit-progress-value {
+  background-color: #ef4444;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 20px;
+}
+progress::-webkit-progress-value {
+  border-radius: 20px;
+}
