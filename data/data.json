@@ -92,5 +92,157 @@
       "unique": 10,
       "new_users": 14
     }
+  ],
+
+  "facebook": [
+    {
+      "month": "January",
+      "friends": 19321,
+      "feeds": 54
+    },
+    {
+      "month": "February",
+      "friends": 23121,
+      "feeds": 123
+    },
+    {
+      "month": "March",
+      "friends": 43654,
+      "feeds": 210
+    },
+    {
+      "month": "April",
+      "friends": 61978,
+      "feeds": 98
+    },
+    {
+      "month": "May",
+      "friends": 10000,
+      "feeds": 265
+    },
+    {
+      "month": "June",
+      "friends": 3200,
+      "feeds": 76
+    },
+    {
+      "month": "July",
+      "friends": 11000,
+      "feeds": 187
+    }
+  ],
+
+  "twitter": [
+    {
+      "month": "January",
+      "followers": 31321,
+      "tweets": 118
+    },
+    {
+      "month": "February",
+      "followers": 11121,
+      "tweets": 49
+    },
+    {
+      "month": "March",
+      "followers": 32054,
+      "tweets": 210
+    },
+    {
+      "month": "April",
+      "followers": 10978,
+      "tweets": 170
+    },
+    {
+      "month": "May",
+      "followers": 15300,
+      "tweets": 329
+    },
+    {
+      "month": "June",
+      "followers": 7500,
+      "tweets": 72
+    },
+    {
+      "month": "July",
+      "followers": 12000,
+      "tweets": 100
+    }
+  ],
+
+  "linkedin": [
+    {
+      "month": "January",
+      "contacts": 31,
+      "feeds": 118
+    },
+    {
+      "month": "February",
+      "contacts": 11,
+      "feeds": 80
+    },
+    {
+      "month": "March",
+      "contacts": 32,
+      "feeds": 115
+    },
+    {
+      "month": "April",
+      "contacts": 10,
+      "feeds": 70
+    },
+    {
+      "month": "May",
+      "contacts": 15,
+      "feeds": 309
+    },
+    {
+      "month": "June",
+      "contacts": 75,
+      "feeds": 72
+    },
+    {
+      "month": "July",
+      "contacts": 12,
+      "feeds": 140
+    }
+  ],
+
+  "calendar": [
+    {
+      "month": "January",
+      "events": 2,
+      "meetings": 0
+    },
+    {
+      "month": "February",
+      "events": 0,
+      "meetings": 1
+    },
+    {
+      "month": "March",
+      "events": 3,
+      "meetings": 1
+    },
+    {
+      "month": "April",
+      "events": 5,
+      "meetings": 1
+    },
+    {
+      "month": "May",
+      "events": 1,
+      "meetings": 0
+    },
+    {
+      "month": "June",
+      "events": 3,
+      "meetings": 1
+    },
+    {
+      "month": "July",
+      "events": 0,
+      "meetings": 0
+    }
   ]
 }

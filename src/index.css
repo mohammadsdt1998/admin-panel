@@ -24,3 +24,31 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   border-radius: 20px;
 }
+
+/* small charts background */
+
+.facebook {
+  background-image: url(../public/img/facebook-word-cloud-collage-uubjfuzvldvery4r.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.twitter {
+  background-image: url(../public/img/twitter.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.linkedin {
+  background-image: url(../public/img/linkedin.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+.calendar {
+  background-image: url(../public/img/calendar.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* small charts  background*/
