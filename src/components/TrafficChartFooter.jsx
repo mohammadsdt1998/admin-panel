@@ -13,32 +13,35 @@ function TrafficChartFooter({ socialMediaData }) {
   );
 
   return (
-    <footer className="flex w-full items-center justify-around gap-5 rounded-b-md border-t border-gray-600 bg-slate-800 py-3">
-      <div className="flex flex-col gap-3">
+    <footer
+      className="grid w-full grid-cols-2 items-center justify-around
+     gap-5 rounded-b-md border-t border-gray-600 bg-slate-800 py-3 lg:grid-cols-3"
+    >
+      <div className="col-span-1 flex flex-col items-center justify-center gap-3">
         <h3 className="font-medium text-gray-400">Visits</h3>
         <p className="font-semibold text-slate-200">{totalVisits} Users</p>
         <progress
           value={totalVisits}
           max={250}
-          className="visit-progress h-1 w-60"
+          className="visit-progress h-1 w-3/4"
         ></progress>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="col-span-1 flex flex-col items-center justify-center gap-3">
         <h3 className="font-medium text-gray-400">Unique</h3>
         <p className="font-semibold text-slate-200">{totalUnique} Users</p>
         <progress
           value={totalUnique}
           max={250}
-          className="unique-progress h-1 w-60"
+          className="unique-progress h-1 w-3/4"
         ></progress>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="col-span-1 flex flex-col items-center justify-center gap-3">
         <h3 className="font-medium text-gray-400">New Users</h3>
         <p className="font-semibold text-slate-200">{totalNewUsers} Users</p>
         <progress
           value={totalNewUsers}
           max={250}
-          className="new-user-progress h-1 w-60"
+          className="new-user-progress h-1 w-3/4"
         ></progress>
       </div>
     </footer>

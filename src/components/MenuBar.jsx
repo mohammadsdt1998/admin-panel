@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import MenuBarLink from "./MenuBarLink";
+import { IoHomeOutline } from "react-icons/io5";
+import { TbUsers } from "react-icons/tb";
 
 function MenuBar() {
   return (
-    <div className="ml-3 flex flex-col justify-center p-1">
-      <Link to="/">Home</Link>
-      <Link to="/users">Users</Link>
+    <div className="flex flex-col items-center justify-center">
+      <MenuBarLink to={`/`}>
+        <IoHomeOutline className="text-gray-400" />
+        <p className="text-lg">Home</p>
+      </MenuBarLink>
+      <MenuBarLink to={`/users`}>
+        <TbUsers className="text-gray-400" />
+        <p className="text-lg">Users</p>
+      </MenuBarLink>
     </div>
   );
 }
