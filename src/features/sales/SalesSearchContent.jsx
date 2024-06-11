@@ -93,7 +93,12 @@ function SalesSearchContent() {
               Organic Search
             </p>
 
-            <p className="font-semibold">{organicSearchPercentage}%</p>
+            <p className="font-semibold">
+              {organicSearch}{" "}
+              <span className="text-sm text-slate-400">
+                ({organicSearchPercentage}%)
+              </span>
+            </p>
           </div>
           <progress
             value={organicSearch}
@@ -109,7 +114,12 @@ function SalesSearchContent() {
               Facebook
             </p>
 
-            <p className="font-semibold">{facebookPercentage}%</p>
+            <p className="font-semibold">
+              {facebook}{" "}
+              <span className="text-sm text-slate-400">
+                ({facebookPercentage}%)
+              </span>
+            </p>
           </div>
           <progress
             value={facebook}
@@ -125,7 +135,12 @@ function SalesSearchContent() {
               Twitter
             </p>
 
-            <p className="font-semibold">{twitterPercentage}%</p>
+            <p className="font-semibold">
+              {twitter}{" "}
+              <span className="text-sm text-slate-400">
+                ({twitterPercentage}%)
+              </span>
+            </p>
           </div>
           <progress
             value={twitter}
@@ -141,7 +156,12 @@ function SalesSearchContent() {
               Linkedin
             </p>
 
-            <p className="font-semibold">{linkedinPercentage}%</p>
+            <p className="font-semibold">
+              {linkedin}{" "}
+              <span className="text-sm text-slate-400">
+                ({linkedinPercentage}%)
+              </span>
+            </p>
           </div>
           <progress
             value={linkedin}
