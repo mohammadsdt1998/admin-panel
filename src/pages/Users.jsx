@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
 import { getUsers } from "../services/getData";
 import { useLoaderData } from "react-router-dom";
-import Sales from "../components/Sales";
+import Sales from "../features/sales/Sales";
+import { SalesProvider } from "../contexts/SalesContext";
 
 function Users() {
   const usersData = useLoaderData();
-  console.log(usersData);
 
   return (
-    <div>
-      <Sales />
-    </div>
+    <SalesProvider>
+      <div className="mx-auto h-auto w-full max-w-7xl gap-5 p-4">
+        <Sales />
+      </div>
+    </SalesProvider>
   );
 }
 
 export async function loader() {
-  const usersData = await getUsers();
+  const usersData = getUsers();
+
   return usersData;
 }
 

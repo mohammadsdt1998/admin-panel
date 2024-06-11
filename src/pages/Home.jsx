@@ -6,12 +6,12 @@ import {
   getTwitterData,
 } from "../services/getData";
 import { useLoaderData } from "react-router-dom";
-import UsersChart from "../components/charts/UsersChart";
-import IncomeChart from "../components/charts/IncomeChart";
-import ConversationChart from "../components/charts/ConversationChart";
-import SessionsChart from "../components/charts/SessionsChart";
-import TrafficChart from "../components/charts/TrafficChart";
-import SmallCharts from "../components/charts/SmallCharts";
+import UsersChart from "../features/charts/UsersChart";
+import IncomeChart from "../features/charts/IncomeChart";
+import ConversationChart from "../features/charts/ConversationChart";
+import SessionsChart from "../features/charts/SessionsChart";
+import TrafficChart from "../features/charts/TrafficChart";
+import SmallCharts from "../features/charts/SmallCharts";
 
 function Home() {
   const {

@@ -244,5 +244,54 @@
       "events": 0,
       "meetings": 0
     }
+  ],
+
+  "clients": [
+    {
+      "weekDay": "Monday",
+      "newClients": 548,
+      "recurringClients": 3200
+    },
+    {
+      "weekDay": "Tueseday",
+      "newClients": 632,
+      "recurringClients": 5400
+    },
+    {
+      "weekDay": "Wednesday",
+      "newClients": 1032,
+      "recurringClients": 7421
+    },
+    {
+      "weekDay": "Thursday",
+      "newClients": 321,
+      "recurringClients": 12000
+    },
+    {
+      "weekDay": "Friday",
+      "newClients": 200,
+      "recurringClients": 6532
+    },
+    {
+      "weekDay": "Saturday",
+      "newClients": 123,
+      "recurringClients": 8732
+    },
+    {
+      "weekDay": "Sunday",
+      "newClients": 349,
+      "recurringClients": 9532
+    }
+  ],
+
+  "pageviews": [{ "male": 52643, "female": 33921 }],
+
+  "organic": [
+    {
+      "organicSearch": 32145,
+      "facebook": 10321,
+      "twitter": 5439,
+      "linkedin": 1254
+    }
   ]
 }

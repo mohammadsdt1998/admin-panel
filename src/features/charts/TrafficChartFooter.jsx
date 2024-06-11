@@ -24,7 +24,7 @@ function TrafficChartFooter({ socialMediaData }) {
           value={totalVisits}
           max={250}
           className="visit-progress h-1 w-3/4"
-        ></progress>
+        />
       </div>
       <div className="col-span-1 flex flex-col items-center justify-center gap-3">
         <h3 className="font-medium text-gray-400">Unique</h3>
@@ -33,7 +33,7 @@ function TrafficChartFooter({ socialMediaData }) {
           value={totalUnique}
           max={250}
           className="unique-progress h-1 w-3/4"
-        ></progress>
+        />
       </div>
       <div className="col-span-1 flex flex-col items-center justify-center gap-3">
         <h3 className="font-medium text-gray-400">New Users</h3>
@@ -42,7 +42,7 @@ function TrafficChartFooter({ socialMediaData }) {
           value={totalNewUsers}
           max={250}
           className="new-user-progress h-1 w-3/4"
-        ></progress>
+        />
       </div>
     </footer>
   );

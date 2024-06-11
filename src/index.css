@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* loader */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* loader */
+
+/* -------------------------------------------------------------- */
+
+/*progress bars */
 progress::-webkit-progress-bar {
   background-color: #475569;
 }
@@ -10,11 +41,13 @@ progress.visit-progress::-webkit-progress-value {
   background-color: #22c55e;
 }
 
-progress.unique-progress::-webkit-progress-value {
+progress.unique-progress::-webkit-progress-value,
+progress.new-clients-progress::-webkit-progress-value {
   background-color: #0ea5e9;
 }
 
-progress.new-user-progress::-webkit-progress-value {
+progress.new-user-progress::-webkit-progress-value,
+progress.recurring-clients-progress::-webkit-progress-value {
   background-color: #ef4444;
 }
 
@@ -24,6 +57,18 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   border-radius: 20px;
 }
+
+progress.pageviews-progress::-webkit-progress-value {
+  background-color: #eab308;
+}
+
+progress.organic-progress::-webkit-progress-value {
+  background-color: #16a34a;
+}
+
+/* progress bars */
+
+/* ------------------------------------------------------------------- */
 
 /* small charts background */
 
@@ -52,3 +97,5 @@ progress::-webkit-progress-value {
 }
 
 /* small charts  background*/
+
+/* ----------------------------------------------------------------------- */

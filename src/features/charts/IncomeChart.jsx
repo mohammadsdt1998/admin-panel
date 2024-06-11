@@ -11,6 +11,7 @@ function IncomeChart({ socialMediaData }) {
   return (
     <div className="col-span-1 h-40 w-full rounded-md bg-blue-500">
       <div className="flex h-full w-full flex-col items-baseline text-black">
+        {/* chart header */}
         <div className="flex h-full w-full flex-col items-start justify-around p-4 text-slate-100">
           <div className="flex w-full items-center justify-between">
             <h1 className="text-xl font-semibold">${averageIncome}</h1>
@@ -19,6 +20,9 @@ function IncomeChart({ socialMediaData }) {
           <p>Income</p>
         </div>
 
+        {/* chart header */}
+
+        {/* chart content */}
         <div className="mb-3 h-full w-full">
           <ResponsiveContainer width="99%" height="100%">
             <LineChart width={150} height={100} data={socialMediaData}>
@@ -41,6 +45,8 @@ function IncomeChart({ socialMediaData }) {
             </LineChart>
           </ResponsiveContainer>
         </div>
+
+        {/* chart content */}
       </div>
     </div>
   );

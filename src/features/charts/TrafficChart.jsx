@@ -8,8 +8,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import TrafficChartHeader from "../TrafficChartHeader";
-import TrafficChartFooter from "../TrafficChartFooter";
+import TrafficChartHeader from "./TrafficChartHeader";
+import TrafficChartFooter from "./TrafficChartFooter";
 
 function TrafficChart({ socialMediaData }) {
   const yTicks = [0, 50, 100];
