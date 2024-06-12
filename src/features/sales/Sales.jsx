@@ -1,5 +1,4 @@
 import UsersTable from "../../components/UsersTable";
-import { useSales } from "../../contexts/SalesContext";
 import SalesClientsContent from "./SalesClientsContent";
 import SalesClientsHeader from "./SalesClientsHeader";
 import SalesSearchContent from "./SalesSearchContent";
@@ -12,22 +11,23 @@ function Sales() {
         <p className="ml-2 text-base text-slate-200">Traffic & Sales</p>
       </header>
       <div className="flex flex-col">
-        {/* clients and search header */}
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:flex-row">
-          <SalesClientsHeader />
-          <SalesSearchHeader />
-        </div>
-
-        {/* clients and search header */}
-
-        {/* clients and search content */}
-
         <div className="grid grid-cols-1 gap-2 pb-7 md:grid-cols-2 md:flex-row">
-          <SalesClientsContent />
-          <SalesSearchContent />
+          {/*clients details */}
+          <div>
+            <SalesClientsHeader />
+            <SalesClientsContent />
+          </div>
+          {/*clients details */}
+
+          {/*search details */}
+          <div>
+            <SalesSearchHeader />
+            <SalesSearchContent />
+          </div>
+
+          {/*search details */}
         </div>
 
-        {/* clients and search content */}
         <UsersTable />
       </div>
     </div>

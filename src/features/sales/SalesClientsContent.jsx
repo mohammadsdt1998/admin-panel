@@ -10,7 +10,7 @@ function SalesClientsContent() {
   }
 
   return (
-    <div className="col=span-1">
+    <div className="col-span-1">
       <ul className="flex flex-col gap-7 p-3">
         {clientsData &&
           clientsData.map((item) => (
