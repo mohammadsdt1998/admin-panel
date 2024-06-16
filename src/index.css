@@ -32,7 +32,10 @@
 
 /* -------------------------------------------------------------- */
 
-/*progress bars */
+/* progress bars */
+
+/* webkit for chrome and moz for firefox */
+
 progress::-webkit-progress-bar {
   background-color: #475569;
 }
@@ -63,6 +66,33 @@ progress.pageviews-progress::-webkit-progress-value {
 }
 
 progress.organic-progress::-webkit-progress-value {
+  background-color: #16a34a;
+}
+
+progress {
+  background-color: #475569;
+  border-radius: 20px;
+}
+
+progress.visit-progress::-moz-progress-bar {
+  background-color: #22c55e;
+}
+
+progress.unique-progress::-moz-progress-bar,
+progress.new-clients-progress::-moz-progress-bar {
+  background-color: #0ea5e9;
+}
+
+progress.new-user-progress::-moz-progress-bar,
+progress.recurring-clients-progress::-moz-progress-bar {
+  background-color: #ef4444;
+}
+
+progress.pageviews-progress::-moz-progress-bar {
+  background-color: #eab308;
+}
+
+progress.organic-progress::-moz-progress-bar {
   background-color: #16a34a;
 }
 

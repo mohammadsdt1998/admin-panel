@@ -32,7 +32,7 @@ function SalesSearchContent() {
   const linkedin = (organicData[0] && organicData[0].linkedin) || 0;
 
   const totalOrganic = Object.values(organicData[0] || {}).reduce(
-    (acc, curr) => acc + curr,
+    (acc, curr) => acc + parseInt(curr, 10),
     0,
   );
 
