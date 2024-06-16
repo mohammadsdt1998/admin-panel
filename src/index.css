@@ -50,7 +50,8 @@ progress.new-clients-progress::-webkit-progress-value {
 }
 
 progress.new-user-progress::-webkit-progress-value,
-progress.recurring-clients-progress::-webkit-progress-value {
+progress.recurring-clients-progress::-webkit-progress-value,
+progress.user-table-odd-progress::-webkit-progress-value {
   background-color: #ef4444;
 }
 
@@ -65,7 +66,8 @@ progress.pageviews-progress::-webkit-progress-value {
   background-color: #eab308;
 }
 
-progress.organic-progress::-webkit-progress-value {
+progress.organic-progress::-webkit-progress-value,
+progress.user-table-even-progress::-webkit-progress-value {
   background-color: #16a34a;
 }
 
@@ -84,7 +86,8 @@ progress.new-clients-progress::-moz-progress-bar {
 }
 
 progress.new-user-progress::-moz-progress-bar,
-progress.recurring-clients-progress::-moz-progress-bar {
+progress.recurring-clients-progress::-moz-progress-bar,
+progress.user-table-odd-progress::-moz-progress-bar {
   background-color: #ef4444;
 }
 
@@ -92,7 +95,8 @@ progress.pageviews-progress::-moz-progress-bar {
   background-color: #eab308;
 }
 
-progress.organic-progress::-moz-progress-bar {
+progress.organic-progress::-moz-progress-bar,
+progress.user-table-even-progress::-moz-progress-bar {
   background-color: #16a34a;
 }
 

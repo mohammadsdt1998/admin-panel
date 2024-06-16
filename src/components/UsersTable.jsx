@@ -38,7 +38,7 @@ const columns = [
     id: "icon",
     header: () => (
       <span className="flex items-center justify-center">
-        <LuUsers2 />
+        <LuUsers2 className="text-lg" />
       </span>
     ),
     cell: (info) => info.getValue(),
@@ -46,19 +46,29 @@ const columns = [
   }),
   columnHelper.accessor((row) => row.user, {
     id: "user",
-    cell: (info) => <i>{info.getValue()}</i>,
-    header: () => <span>user</span>,
+    cell: (info) => <span className="flex">{info.getValue()}</span>,
+    header: () => <span className="flex">User</span>,
     footer: (info) => info.column.id,
   }),
   columnHelper.accessor("country", {
-    header: () => "country",
+    header: () => "Country",
     cell: (info) => info.renderValue(),
     footer: (info) => info.column.id,
   }),
   columnHelper.accessor("usage", {
-    header: () => <span>usage</span>,
+    header: () => <span className="flex">Usage</span>,
     cell: (info) => (
-      <progress className="h-1 w-full" value={info.getValue()} max={100} />
+      <div className="flex flex-col">
+        <div className="mb-1 flex items-center justify-between">
+          <h2 className="font-semibold">{info.getValue()}%</h2>
+          <p className="text-sm text-gray-400">January-July</p>
+        </div>
+        <progress
+          className={`h-1 w-full ${info.row.index % 2 === 0 ? "user-table-even-progress" : "user-table-odd-progress"}`}
+          value={info.getValue()}
+          max={100}
+        />
+      </div>
     ),
     footer: (info) => info.column.id,
   }),
@@ -80,13 +90,13 @@ function UsersTable() {
   });
 
   return (
-    <div className="m-2 flex items-center justify-center border border-slate-100 p-5">
-      <table className="h-full w-full">
-        <thead className="">
+    <div className="m-2 flex items-center justify-center border border-gray-600">
+      <table className="h-full w-full table-auto border-collapse text-slate-100">
+        <thead className="bg-gray-800">
           {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
+            <tr key={headerGroup.id} className="border-b border-gray-600">
               {headerGroup.headers.map((header) => (
-                <th key={header.id}>
+                <th key={header.id} className="px-4 py-2">
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -100,9 +110,9 @@ function UsersTable() {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
+            <tr key={row.id} className="bg-transparent">
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
+                <td key={cell.id} className="border-t border-gray-600 p-4">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
