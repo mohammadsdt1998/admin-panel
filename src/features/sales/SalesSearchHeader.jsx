@@ -8,15 +8,15 @@ function SalesSearchHeader() {
     return <Loader />;
   }
 
-  const male = (viewsData[0] && viewsData[0].male) || 0;
-  const female = (viewsData[0] && viewsData[0].female) || 0;
-
-  const totalPageviews = male + female;
-
   const totalOrganic = Object.values(organicData[0] || {}).reduce(
     (acc, curr) => acc + parseInt(curr, 10),
     0,
   );
+
+  const male = (viewsData[0] && viewsData[0].male) || 0;
+  const female = (viewsData[0] && viewsData[0].female) || 0;
+
+  const totalPageviews = male + female;
 
   return (
     <div className="col-span-1 flex items-center justify-between gap-2 px-3 py-2">
