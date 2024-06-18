@@ -1,15 +1,4 @@
 {
-  "users": [
-    {
-      "name": "mohammad",
-      "id": 1
-    },
-    {
-      "name": "ali",
-      "id": 2
-    }
-  ],
-
   "charts": [
     {
       "chart": "no.1",
@@ -292,6 +281,33 @@
       "facebook": 10321,
       "twitter": 5439,
       "linkedin": 2000
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "icon": "/public/img/unnamed.jpg",
+      "user": "mohammad sadati",
+      "country": "🇮🇷",
+      "usage": 90,
+      "payment": "paypal"
+    },
+    {
+      "id": 2,
+      "icon": "/public/img/unnamed.jpg",
+      "user": "kosar fathiyan",
+      "country": "🇯🇵",
+      "usage": 40,
+      "payment": "visa"
+    },
+    {
+      "id": 3,
+      "icon": "/public/img/unnamed.jpg",
+      "user": "puria adhami",
+      "country": "🇩🇪",
+      "usage": 20,
+      "payment": "stripe"
     }
   ]
 }

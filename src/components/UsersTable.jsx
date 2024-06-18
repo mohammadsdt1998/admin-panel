@@ -6,30 +6,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { LuUsers2 } from "react-icons/lu";
-
-const defaultData = [
-  {
-    icon: "/public/img/unnamed.jpg",
-    user: "mohammad sadati",
-    country: "🇮🇷",
-    usage: 90,
-    payment: "paypal",
-  },
-  {
-    icon: "/public/img/unnamed.jpg",
-    user: "kosar fathiyan",
-    country: "🇯🇵",
-    usage: 40,
-    payment: "visa",
-  },
-  {
-    icon: "/public/img/unnamed.jpg",
-    user: "puria adhami",
-    country: "🇩🇪",
-    usage: 20,
-    payment: "stripe",
-  },
-];
+import { useSales } from "../contexts/SalesContext";
 
 const columnHelper = createColumnHelper();
 
@@ -37,7 +14,7 @@ const columns = [
   columnHelper.accessor("icon", {
     id: "icon",
     header: () => (
-      <span className="flex items-center justify-center">
+      <span className="ml-2 flex items-center">
         <LuUsers2 className="text-lg" />
       </span>
     ),
@@ -55,7 +32,9 @@ const columns = [
   columnHelper.accessor((row) => row.user, {
     id: "user",
     cell: (info) => (
-      <span className="flex items-center text-nowrap">{info.getValue()}</span>
+      <span className="flex items-center text-nowrap capitalize">
+        {info.getValue()}
+      </span>
     ),
     header: () => <span className="flex items-center">User</span>,
     footer: (info) => info.column.id,
@@ -92,11 +71,10 @@ const columns = [
 ];
 
 function UsersTable() {
-  const [data, _setData] = React.useState(() => [...defaultData]);
-  // const rerender = React.useReducer(() => ({}), {})[1];
+  const { usersData } = useSales();
 
   const table = useReactTable({
-    data,
+    data: usersData ?? [],
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
@@ -125,7 +103,10 @@ function UsersTable() {
             {table.getRowModel().rows.map((row) => (
               <tr key={row.id} className="bg-transparent">
                 {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id} className="border-t border-gray-600 p-4">
+                  <td
+                    key={cell.id}
+                    className="border-t border-gray-600 px-2 py-3"
+                  >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}

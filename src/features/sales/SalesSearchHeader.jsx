@@ -7,7 +7,8 @@ function SalesSearchHeader() {
   if (!viewsData[0] || !organicData[0]) {
     return <Loader />;
   }
-
+  console.log(organicData);
+  
   const totalOrganic = Object.values(organicData[0] || {}).reduce(
     (acc, curr) => acc + parseInt(curr, 10),
     0,

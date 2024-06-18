@@ -8,6 +8,7 @@ function SalesProvider({ children }) {
   const [clientsData, setClientsData] = useState([]);
   const [viewsData, setViewsData] = useState([]);
   const [organicData, setOrganicData] = useState([]);
+  const [usersData, setUsersData] = useState([]);
 
   useEffect(function () {
     async function fetchClientsData() {
@@ -48,8 +49,24 @@ function SalesProvider({ children }) {
     fetchOrganicData();
   }, []);
 
+  useEffect(function () {
+    async function fetchUsersData() {
+      const res = await fetch(`${BASE_URL}/users`);
+      if (!res.ok) {
+        throw new Error(`HTTP error: ${res.status}`);
+      }
+
+      const data = await res.json();
+      setUsersData(data);
+    }
+
+    fetchUsersData();
+  });
+
   return (
-    <SalesContext.Provider value={{ clientsData, viewsData, organicData }}>
+    <SalesContext.Provider
+      value={{ clientsData, viewsData, organicData, usersData }}
+    >
       {children}
     </SalesContext.Provider>
   );
