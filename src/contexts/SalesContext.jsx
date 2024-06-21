@@ -61,7 +61,7 @@ function SalesProvider({ children }) {
     }
 
     fetchUsersData();
-  });
+  }, []);
 
   return (
     <SalesContext.Provider

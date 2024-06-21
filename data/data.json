@@ -308,6 +308,14 @@
       "country": "🇩🇪",
       "usage": 20,
       "payment": "stripe"
+    },
+    {
+      "id": 4,
+      "icon": "/public/img/unnamed.jpg",
+      "user": "ali taghavi",
+      "country": "🇩🇪",
+      "usage": 55,
+      "payment": "paypal"
     }
   ]
 }

@@ -7,12 +7,10 @@ function SalesSearchHeader() {
   if (!viewsData[0] || !organicData[0]) {
     return <Loader />;
   }
-  console.log(organicData);
-  
-  const totalOrganic = Object.values(organicData[0] || {}).reduce(
-    (acc, curr) => acc + parseInt(curr, 10),
-    0,
-  );
+
+  const totalOrganic = Object.values(organicData[0] || {})
+    .filter((value) => !isNaN(parseInt(value, 10)))
+    .reduce((acc, curr) => acc + parseInt(curr, 10), 0);
 
   const male = (viewsData[0] && viewsData[0].male) || 0;
   const female = (viewsData[0] && viewsData[0].female) || 0;
