@@ -8,6 +8,7 @@ import {
 import { LuUsers2 } from "react-icons/lu";
 import { useSales } from "../contexts/SalesContext";
 import AddUserForm from "../services/AddUserForm";
+import { MdDeleteForever } from "react-icons/md";
 
 const columnHelper = createColumnHelper();
 
@@ -72,7 +73,7 @@ const columns = [
 ];
 
 function UsersTable() {
-  const { usersData } = useSales();
+  const { usersData, deleteUser } = useSales();
   const [showForm, setShowForm] = useState(false);
 
   const table = useReactTable({
@@ -80,6 +81,10 @@ function UsersTable() {
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
+
+  async function handleDeleteUser(id) {
+    await deleteUser(id);
+  }
 
   return (
     <React.Fragment>
@@ -99,6 +104,7 @@ function UsersTable() {
                           )}
                     </th>
                   ))}
+                  <th></th>
                 </tr>
               ))}
             </thead>
@@ -116,6 +122,14 @@ function UsersTable() {
                       )}
                     </td>
                   ))}
+                  <td className="border-t border-gray-600 px-2 py-3">
+                    <button
+                      className="flex items-center justify-center"
+                      onClick={() => handleDeleteUser(row.original.id)}
+                    >
+                      <MdDeleteForever className="text-xl text-red-700" />
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

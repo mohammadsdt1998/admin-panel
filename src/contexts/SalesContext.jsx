@@ -85,9 +85,33 @@ function SalesProvider({ children }) {
     }
   }
 
+  async function deleteUser(id) {
+    setIsLoading(true);
+    try {
+      const res = await fetch(`${BASE_URL}/users/${id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      });
+      if (!res.ok) {
+        throw new Error(`HTTP error : ${res.status}`);
+      }
+      setUsersData((prevData) => prevData.filter((user) => user.id !== id));
+    } catch (err) {
+      setError("There was an error deleting the user...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
     <SalesContext.Provider
-      value={{ clientsData, viewsData, organicData, usersData, addUser }}
+      value={{
+        clientsData,
+        viewsData,
+        organicData,
+        usersData,
+        addUser,
+        deleteUser,
+      }}
     >
       {children}
     </SalesContext.Provider>

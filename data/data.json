@@ -348,22 +348,6 @@
       "country": "🇩🇪",
       "usage": 20,
       "payment": "stripe"
-    },
-    {
-      "id": "4",
-      "icon": "/public/img/unnamed.jpg",
-      "user": "ali taghavi",
-      "country": "🇩🇪",
-      "usage": 55,
-      "payment": "paypal"
-    },
-    {
-      "id": "3d64",
-      "icon": "/public/img/unnamed.jpg",
-      "user": "ali sitama",
-      "country": "🇮🇷",
-      "usage": "24",
-      "payment": "paypal"
     }
   ]
 }
