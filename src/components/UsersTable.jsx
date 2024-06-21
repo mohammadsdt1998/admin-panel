@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import {
   createColumnHelper,
   flexRender,
@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-table";
 import { LuUsers2 } from "react-icons/lu";
 import { useSales } from "../contexts/SalesContext";
+import AddUserForm from "../services/AddUserForm";
 
 const columnHelper = createColumnHelper();
 
@@ -72,6 +73,7 @@ const columns = [
 
 function UsersTable() {
   const { usersData } = useSales();
+  const [showForm, setShowForm] = useState(false);
 
   const table = useReactTable({
     data: usersData ?? [],
@@ -80,42 +82,54 @@ function UsersTable() {
   });
 
   return (
-    <div className="m-2 flex items-center justify-center border border-gray-600">
-      <div className="w-full overflow-x-auto">
-        <table className="h-full w-full min-w-[600px] table-auto border-collapse text-slate-100 md:min-w-0">
-          <thead className="bg-gray-800">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id} className="border-b border-gray-600">
-                {headerGroup.headers.map((header) => (
-                  <th key={header.id} className="px-4 py-2">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext(),
-                        )}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id} className="bg-transparent">
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    className="border-t border-gray-600 px-2 py-3"
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <React.Fragment>
+      <div className="m-2 flex items-center justify-center border border-gray-600">
+        <div className="w-full overflow-x-auto">
+          <table className="h-full w-full min-w-[600px] table-auto border-collapse text-slate-100 md:min-w-0">
+            <thead className="bg-gray-800">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id} className="border-b border-gray-600">
+                  {headerGroup.headers.map((header) => (
+                    <th key={header.id} className="px-4 py-2">
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext(),
+                          )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr key={row.id} className="bg-transparent">
+                  {row.getVisibleCells().map((cell) => (
+                    <td
+                      key={cell.id}
+                      className="border-t border-gray-600 px-2 py-3"
+                    >
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext(),
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+      <button
+        onClick={() => setShowForm(true)}
+        className="m-auto my-2 w-2/12 rounded bg-blue-500 px-4 py-2 capitalize text-slate-100"
+      >
+        add new user
+      </button>
+      {showForm && <AddUserForm setShowForm={setShowForm} />}
+    </React.Fragment>
   );
 }
 

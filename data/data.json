@@ -2,14 +2,13 @@
   "charts": [
     {
       "chart": "no.1",
-      "id": 1
+      "id": "1"
     },
     {
       "chart": "no.2",
-      "id": 2
+      "id": "2"
     }
   ],
-
   "social-media": [
     {
       "name": "January",
@@ -19,7 +18,8 @@
       "sessions": 5000,
       "visits": 15,
       "unique": 15,
-      "new_users": 31
+      "new_users": 31,
+      "id": "d8a3"
     },
     {
       "name": "February",
@@ -29,7 +29,8 @@
       "sessions": 3475,
       "visits": 5,
       "unique": 20,
-      "new_users": 13
+      "new_users": 13,
+      "id": "2dc9"
     },
     {
       "name": "March",
@@ -39,7 +40,8 @@
       "sessions": 7432,
       "visits": 25,
       "unique": 9,
-      "new_users": 20
+      "new_users": 20,
+      "id": "a02e"
     },
     {
       "name": "April",
@@ -49,7 +51,8 @@
       "sessions": 10800,
       "visits": 9,
       "unique": 27,
-      "new_users": 14
+      "new_users": 14,
+      "id": "3de2"
     },
     {
       "name": "May",
@@ -59,7 +62,8 @@
       "sessions": 8000,
       "visits": 4,
       "unique": 12,
-      "new_users": 5
+      "new_users": 5,
+      "id": "0f31"
     },
     {
       "name": "June",
@@ -69,7 +73,8 @@
       "sessions": 3200,
       "visits": 11,
       "unique": 20,
-      "new_users": 22
+      "new_users": 22,
+      "id": "20ed"
     },
     {
       "name": "July",
@@ -79,214 +84,249 @@
       "sessions": 6000,
       "visits": 7,
       "unique": 10,
-      "new_users": 14
+      "new_users": 14,
+      "id": "acc3"
     }
   ],
-
   "facebook": [
     {
       "month": "January",
       "friends": 19321,
-      "feeds": 54
+      "feeds": 54,
+      "id": "3016"
     },
     {
       "month": "February",
       "friends": 23121,
-      "feeds": 123
+      "feeds": 123,
+      "id": "9fb6"
     },
     {
       "month": "March",
       "friends": 43654,
-      "feeds": 210
+      "feeds": 210,
+      "id": "3e93"
     },
     {
       "month": "April",
       "friends": 61978,
-      "feeds": 98
+      "feeds": 98,
+      "id": "59ab"
     },
     {
       "month": "May",
       "friends": 10000,
-      "feeds": 265
+      "feeds": 265,
+      "id": "a5dd"
     },
     {
       "month": "June",
       "friends": 3200,
-      "feeds": 76
+      "feeds": 76,
+      "id": "a12c"
     },
     {
       "month": "July",
       "friends": 11000,
-      "feeds": 187
+      "feeds": 187,
+      "id": "33e5"
     }
   ],
-
   "twitter": [
     {
       "month": "January",
       "followers": 31321,
-      "tweets": 118
+      "tweets": 118,
+      "id": "d9b4"
     },
     {
       "month": "February",
       "followers": 11121,
-      "tweets": 49
+      "tweets": 49,
+      "id": "2bec"
     },
     {
       "month": "March",
       "followers": 32054,
-      "tweets": 210
+      "tweets": 210,
+      "id": "cfeb"
     },
     {
       "month": "April",
       "followers": 10978,
-      "tweets": 170
+      "tweets": 170,
+      "id": "9dbd"
     },
     {
       "month": "May",
       "followers": 15300,
-      "tweets": 329
+      "tweets": 329,
+      "id": "ed83"
     },
     {
       "month": "June",
       "followers": 7500,
-      "tweets": 72
+      "tweets": 72,
+      "id": "34ed"
     },
     {
       "month": "July",
       "followers": 12000,
-      "tweets": 100
+      "tweets": 100,
+      "id": "133c"
     }
   ],
-
   "linkedin": [
     {
       "month": "January",
       "contacts": 31,
-      "feeds": 118
+      "feeds": 118,
+      "id": "67b9"
     },
     {
       "month": "February",
       "contacts": 11,
-      "feeds": 80
+      "feeds": 80,
+      "id": "2116"
     },
     {
       "month": "March",
       "contacts": 32,
-      "feeds": 115
+      "feeds": 115,
+      "id": "59f6"
     },
     {
       "month": "April",
       "contacts": 10,
-      "feeds": 70
+      "feeds": 70,
+      "id": "ac7f"
     },
     {
       "month": "May",
       "contacts": 15,
-      "feeds": 309
+      "feeds": 309,
+      "id": "f514"
     },
     {
       "month": "June",
       "contacts": 75,
-      "feeds": 72
+      "feeds": 72,
+      "id": "9ea4"
     },
     {
       "month": "July",
       "contacts": 12,
-      "feeds": 140
+      "feeds": 140,
+      "id": "61eb"
     }
   ],
-
   "calendar": [
     {
       "month": "January",
       "events": 2,
-      "meetings": 0
+      "meetings": 0,
+      "id": "43bd"
     },
     {
       "month": "February",
       "events": 0,
-      "meetings": 1
+      "meetings": 1,
+      "id": "1a65"
     },
     {
       "month": "March",
       "events": 3,
-      "meetings": 1
+      "meetings": 1,
+      "id": "a881"
     },
     {
       "month": "April",
       "events": 5,
-      "meetings": 1
+      "meetings": 1,
+      "id": "515e"
     },
     {
       "month": "May",
       "events": 1,
-      "meetings": 0
+      "meetings": 0,
+      "id": "db73"
     },
     {
       "month": "June",
       "events": 3,
-      "meetings": 1
+      "meetings": 1,
+      "id": "4315"
     },
     {
       "month": "July",
       "events": 0,
-      "meetings": 0
+      "meetings": 0,
+      "id": "d421"
     }
   ],
-
   "clients": [
     {
       "weekDay": "Monday",
       "newClients": 548,
-      "recurringClients": 3200
+      "recurringClients": 3200,
+      "id": "5dd4"
     },
     {
       "weekDay": "Tueseday",
       "newClients": 632,
-      "recurringClients": 5400
+      "recurringClients": 5400,
+      "id": "3cc7"
     },
     {
       "weekDay": "Wednesday",
       "newClients": 1032,
-      "recurringClients": 7421
+      "recurringClients": 7421,
+      "id": "dc4e"
     },
     {
       "weekDay": "Thursday",
       "newClients": 321,
-      "recurringClients": 12000
+      "recurringClients": 12000,
+      "id": "c463"
     },
     {
       "weekDay": "Friday",
       "newClients": 200,
-      "recurringClients": 6532
+      "recurringClients": 6532,
+      "id": "411b"
     },
     {
       "weekDay": "Saturday",
       "newClients": 123,
-      "recurringClients": 8732
+      "recurringClients": 8732,
+      "id": "f8e5"
     },
     {
       "weekDay": "Sunday",
       "newClients": 349,
-      "recurringClients": 9532
+      "recurringClients": 9532,
+      "id": "7ec4"
     }
   ],
-
-  "pageviews": [{ "male": 52643, "female": 33921 }],
-
+  "pageviews": [
+    {
+      "male": 52643,
+      "female": 33921,
+      "id": "e8bb"
+    }
+  ],
   "organic": [
     {
       "organicSearch": 32145,
       "facebook": 10321,
       "twitter": 5439,
-      "linkedin": 2000
+      "linkedin": 2000,
+      "id": "d771"
     }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "icon": "/public/img/unnamed.jpg",
       "user": "mohammad sadati",
       "country": "🇮🇷",
@@ -294,7 +334,7 @@
       "payment": "paypal"
     },
     {
-      "id": 2,
+      "id": "2",
       "icon": "/public/img/unnamed.jpg",
       "user": "kosar fathiyan",
       "country": "🇯🇵",
@@ -302,7 +342,7 @@
       "payment": "visa"
     },
     {
-      "id": 3,
+      "id": "3",
       "icon": "/public/img/unnamed.jpg",
       "user": "puria adhami",
       "country": "🇩🇪",
@@ -310,11 +350,19 @@
       "payment": "stripe"
     },
     {
-      "id": 4,
+      "id": "4",
       "icon": "/public/img/unnamed.jpg",
       "user": "ali taghavi",
       "country": "🇩🇪",
       "usage": 55,
+      "payment": "paypal"
+    },
+    {
+      "id": "3d64",
+      "icon": "/public/img/unnamed.jpg",
+      "user": "ali sitama",
+      "country": "🇮🇷",
+      "usage": "24",
       "payment": "paypal"
     }
   ]

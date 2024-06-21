@@ -9,6 +9,8 @@ function SalesProvider({ children }) {
   const [viewsData, setViewsData] = useState([]);
   const [organicData, setOrganicData] = useState([]);
   const [usersData, setUsersData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(function () {
     async function fetchClientsData() {
@@ -63,9 +65,29 @@ function SalesProvider({ children }) {
     fetchUsersData();
   }, []);
 
+  async function addUser(newUser) {
+    setIsLoading(true);
+    try {
+      const res = await fetch(`${BASE_URL}/users`, {
+        method: "POST",
+        body: JSON.stringify(newUser),
+        headers: { "Content-Type": "application/json" },
+      });
+      if (!res.ok) {
+        throw new Error(`HTTP error : ${res.status}`);
+      }
+      const data = await res.json();
+      setUsersData((prevData) => [...prevData, data]);
+    } catch (err) {
+      setError("There was an error creating the user...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <SalesContext.Provider
-      value={{ clientsData, viewsData, organicData, usersData }}
+      value={{ clientsData, viewsData, organicData, usersData, addUser }}
     >
       {children}
     </SalesContext.Provider>

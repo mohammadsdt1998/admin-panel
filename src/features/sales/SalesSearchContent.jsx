@@ -31,10 +31,9 @@ function SalesSearchContent() {
   const twitter = (organicData[0] && organicData[0].twitter) || 0;
   const linkedin = (organicData[0] && organicData[0].linkedin) || 0;
 
-  const totalOrganic = Object.values(organicData[0] || {}).reduce(
-    (acc, curr) => acc + parseInt(curr, 10),
-    0,
-  );
+  const totalOrganic = Object.values(organicData[0] || {})
+    .filter((value) => !isNaN(parseInt(value, 10)))
+    .reduce((acc, curr) => acc + parseInt(curr, 10), 0);
 
   const organicSearchPercentage = Math.round(
     (organicSearch * 100) / totalOrganic,
