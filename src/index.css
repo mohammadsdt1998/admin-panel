@@ -133,3 +133,34 @@ progress.user-table-even-progress::-moz-progress-bar {
 /* small charts  background*/
 
 /* ----------------------------------------------------------------------- */
+
+/* accardion styles in sidebar */
+.accordion-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 300ms ease-out,
+    opacity 300ms ease-out;
+}
+
+.accordion-enter-active {
+  max-height: 100px; /* Adjust as needed */
+  opacity: 1;
+}
+
+.accordion-exit {
+  max-height: 100px; /* Adjust as needed */
+  opacity: 1;
+  overflow: hidden;
+  transition:
+    max-height 300ms ease-in,
+    opacity 300ms ease-in;
+}
+
+.accordion-exit-active {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* accardion styles in sidebar */
