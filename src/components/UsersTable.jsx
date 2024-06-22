@@ -16,12 +16,12 @@ const columns = [
   columnHelper.accessor("icon", {
     id: "icon",
     header: () => (
-      <span className="ml-2 flex items-center">
+      <span className="flex items-center justify-around text-center">
         <LuUsers2 className="text-lg" />
       </span>
     ),
     cell: (info) => (
-      <div className="h-12 w-12">
+      <div className="mx-auto h-12 w-12">
         <img
           src={info.getValue()}
           alt="user icon"
@@ -138,7 +138,7 @@ function UsersTable() {
       </div>
       <button
         onClick={() => setShowForm(true)}
-        className="m-auto my-2 w-2/12 rounded bg-blue-500 px-4 py-2 capitalize text-slate-100"
+        className="m-auto my-2 text-nowrap rounded bg-blue-500 px-4 py-2 capitalize text-slate-100"
       >
         add new user
       </button>
