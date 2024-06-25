@@ -43,8 +43,18 @@ function Login() {
 
         {/* register div in login page */}
 
-        <div className="w-full rounded-r border-l border-gray-600 bg-indigo-500 p-10">
-          register
+        <div className="flex w-full flex-col items-center justify-around rounded-r border-l border-gray-600 bg-indigo-500 p-10">
+          <h1 className="text-4xl font-semibold capitalize">sign up</h1>
+          <p className="text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <Link
+            to={"/register"}
+            className="rounded bg-indigo-600 bg-opacity-90 p-2 capitalize"
+          >
+            register now!
+          </Link>
         </div>
 
         {/* register div in login page */}

@@ -12,13 +12,17 @@ function OtherPagesAccardion({ openAccardion }) {
       unmountOnExit
     >
       <React.Fragment>
-        <MenuBarLink to={`/login`}>
+        <MenuBarLink to="/login">
           <GoDot className="text-gray-400" />
           <p className="text-lg capitalize">login</p>
         </MenuBarLink>
-        <MenuBarLink>
+        <MenuBarLink to="/register">
           <GoDot className="text-gray-400" />
           <p className="text-lg capitalize">register</p>
+        </MenuBarLink>
+        <MenuBarLink to="/404">
+          <GoDot className="text-gray-400" />
+          <p className="text-lg capitalize">error 404</p>
         </MenuBarLink>
       </React.Fragment>
     </CSSTransition>
