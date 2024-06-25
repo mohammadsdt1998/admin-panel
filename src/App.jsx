@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home, { loader as socialMediaLoader } from "./pages/Home";
 import Users from "./pages/Users";
-import Products from "./pages/Products";
 import AppLayout from "./ui/AppLayout";
 import Login from "./pages/Login";
+import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
@@ -18,15 +18,15 @@ const router = createBrowserRouter([
         path: "/users",
         element: <Users />,
       },
-      {
-        path: "/products",
-        element: <Products />,
-      },
     ],
   },
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/404",
+    element: <Error404 />,
   },
 ]);
 

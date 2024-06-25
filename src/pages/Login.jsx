@@ -25,7 +25,7 @@ function Login() {
           {/* login forms */}
           <div className="flex w-full flex-col items-center justify-around gap-3 sm:flex-row">
             <Link
-              to={username && password === "sdt" ? "/" : "/login"}
+              to={username && password === "sdt" ? "/" : "/404"}
               className="rounded bg-indigo-500 px-6 py-2 text-slate-100"
             >
               Login
@@ -41,12 +41,13 @@ function Login() {
 
         {/* login */}
 
-        {/* sign up */}
+        {/* register div in login page */}
+
         <div className="w-full rounded-r border-l border-gray-600 bg-indigo-500 p-10">
           register
         </div>
 
-        {/* sign up */}
+        {/* register div in login page */}
       </div>
     </div>
   );
