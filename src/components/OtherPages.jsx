@@ -1,11 +1,9 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
 import { SlDocs } from "react-icons/sl";
 import { IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5";
 import "/src/index.css";
-import MenuBarLink from "./MenuBarLink";
-import { GoDot } from "react-icons/go";
+import OtherPagesAccardion from "./OtherPagesAccardion";
 
 function OtherPages() {
   const [openAccardion, setOpenAccardion] = useState(false);
@@ -26,23 +24,7 @@ function OtherPages() {
         </div>
         {openAccardion ? <IoChevronUpOutline /> : <IoChevronDownOutline />}
       </div>
-      <CSSTransition
-        in={openAccardion}
-        timeout={300}
-        classNames="accordion"
-        unmountOnExit
-      >
-        <React.Fragment>
-          <MenuBarLink>
-            <GoDot className="text-gray-400" />
-            <p className="text-lg capitalize">register</p>
-          </MenuBarLink>
-          <MenuBarLink>
-            <GoDot className="text-gray-400" />
-            <p className="text-lg capitalize">register</p>
-          </MenuBarLink>
-        </React.Fragment>
-      </CSSTransition>
+      <OtherPagesAccardion openAccardion={openAccardion} />
     </div>
   );
 }
