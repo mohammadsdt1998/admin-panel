@@ -43,9 +43,14 @@ function Login() {
 
         {/* register div in login page */}
 
-        <div className="flex w-full flex-col items-center justify-around rounded-r border-l border-gray-600 bg-indigo-500 p-10">
-          <h1 className="text-4xl font-semibold capitalize">sign up</h1>
-          <p className="text-center">
+        <div
+          className="flex w-full min-w-72 flex-col items-center justify-around gap-2
+         rounded-r border-l border-gray-600 bg-indigo-500 p-10"
+        >
+          <h1 className="w-full p-3 text-center text-4xl font-semibold capitalize">
+            sign up
+          </h1>
+          <p className="w-full p-2 text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>

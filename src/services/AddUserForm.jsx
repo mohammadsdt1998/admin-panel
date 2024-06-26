@@ -28,6 +28,7 @@ function AddUserForm({ setShowForm }) {
         <h2 className="mb-4 text-xl">Add New User</h2>
         {error && <p className="text-red-500">{error}</p>}
         <form onSubmit={submitUser}>
+          {/* username */}
           <div className="mb-4">
             <label className="mb-1 block">User Name</label>
             <input
@@ -38,6 +39,9 @@ function AddUserForm({ setShowForm }) {
               className="w-full rounded border p-2 text-black"
             />
           </div>
+          {/* username */}
+
+          {/* country */}
           <div className="mb-4">
             <label className="mb-1 block">Country</label>
             <input
@@ -49,6 +53,10 @@ function AddUserForm({ setShowForm }) {
               className="w-full rounded border p-2"
             />
           </div>
+
+          {/* country */}
+
+          {/* usage */}
           <div className="mb-4">
             <label className="mb-1 block">Usage</label>
             <input
@@ -63,6 +71,10 @@ function AddUserForm({ setShowForm }) {
               between 0 to 100
             </p>
           </div>
+
+          {/* usage */}
+
+          {/* payment */}
           <div className="mb-4">
             <label className="mb-1 block">Payment Method</label>
             <input
@@ -73,6 +85,10 @@ function AddUserForm({ setShowForm }) {
               className="w-full rounded border p-2 text-black"
             />
           </div>
+
+          {/* payment */}
+
+          {/* add user & cancel button */}
           <div className="flex flex-col justify-end gap-2 md:flex-row">
             <button
               type="submit"
@@ -90,6 +106,8 @@ function AddUserForm({ setShowForm }) {
               Cancel
             </button>
           </div>
+
+          {/* add user & cancel button */}
         </form>
       </div>
     </div>
